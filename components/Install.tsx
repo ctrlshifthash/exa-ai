@@ -57,9 +57,19 @@ export default function Install() {
   return (
     <section
       id="install"
-      className="py-24 md:py-32 border-t border-[#ececec] bg-[#0a0a0a] text-white"
+      className="py-24 md:py-32 border-t border-[#0e3fc4] bg-[#1652f0] text-white relative overflow-hidden"
     >
-      <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      {/* subtle grain to match the exa.ai blue panel */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.07] mix-blend-overlay"
+        style={{
+          backgroundImage:
+            "radial-gradient(white 1px, transparent 1px), radial-gradient(white 1px, transparent 1px)",
+          backgroundSize: "22px 22px, 44px 44px",
+          backgroundPosition: "0 0, 11px 11px",
+        }}
+      />
+      <div className="relative mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div>
           <div className="text-[12px] uppercase tracking-wider text-white/50 mb-4">
             Install
@@ -79,7 +89,7 @@ export default function Install() {
               href="https://github.com/exa-labs/exa-mcp-server"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center bg-white text-[#0a0a0a] text-[15px] font-medium px-5 py-3 rounded-md hover:bg-white/90"
+              className="inline-flex items-center bg-white text-[#1652f0] text-[15px] font-medium px-5 py-3 rounded-md hover:bg-white/95"
             >
               GitHub repo →
             </a>
@@ -87,15 +97,15 @@ export default function Install() {
               href="https://exa.ai"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center text-[15px] font-medium text-white/80 px-5 py-3 rounded-md border border-white/20 hover:bg-white/5"
+              className="inline-flex items-center text-[15px] font-medium text-white px-5 py-3 rounded-md border border-white/30 hover:bg-white/10"
             >
               Get an Exa API key
             </a>
           </div>
         </div>
 
-        <div className="rounded-xl border border-white/10 bg-[#111] overflow-hidden">
-          <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
+        <div className="rounded-xl border border-white/15 bg-[#0d31b5] overflow-hidden shadow-[0_30px_60px_-30px_rgba(0,0,0,0.35)]">
+          <div className="flex items-center justify-between border-b border-white/15 px-4 py-3">
             <div className="flex items-center gap-1.5">
               {tabs.map((t) => (
                 <button
@@ -103,8 +113,8 @@ export default function Install() {
                   onClick={() => setTab(t.id)}
                   className={`text-[12px] px-2.5 py-1.5 rounded-md transition-colors ${
                     tab === t.id
-                      ? "bg-white/10 text-white"
-                      : "text-white/50 hover:text-white"
+                      ? "bg-white/15 text-white"
+                      : "text-white/60 hover:text-white"
                   }`}
                 >
                   {t.label}
@@ -113,12 +123,12 @@ export default function Install() {
             </div>
             <button
               onClick={copy}
-              className="text-[12px] text-white/60 hover:text-white px-2 py-1 rounded-md hover:bg-white/5"
+              className="text-[12px] text-white/70 hover:text-white px-2 py-1 rounded-md hover:bg-white/10"
             >
               {copied ? "Copied" : "Copy"}
             </button>
           </div>
-          <pre className="px-5 py-5 text-[13px] leading-relaxed text-white/85 overflow-x-auto">
+          <pre className="px-5 py-5 text-[13px] leading-relaxed text-white/90 overflow-x-auto font-[family-name:ui-monospace,SFMono-Regular,monospace]">
             <code>{snippets[tab]}</code>
           </pre>
         </div>
