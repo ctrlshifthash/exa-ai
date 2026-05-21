@@ -5,9 +5,14 @@ export default function Hero() {
     <section className="relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 pt-20 pb-16 md:pt-28 md:pb-24">
         <div className="text-center">
-          <div className="inline-flex items-center gap-2 text-[12px] tracking-wide uppercase text-[#6b6b6b] mb-7">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#1652f0]" />
-            Model Context Protocol · v1.0 stable
+          <div className="inline-flex items-center gap-3 mb-7">
+            <span className="inline-flex items-center gap-1.5 text-[11px] font-[family-name:ui-monospace,SFMono-Regular,monospace] bg-[#fafafa] border border-[#ececec] px-2.5 py-1 rounded-full text-[#0a0a0a]">
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#5dff9c] animate-pulse" />
+              mcp · stable
+            </span>
+            <span className="hidden sm:inline-flex text-[11px] font-[family-name:ui-monospace,SFMono-Regular,monospace] text-[#6b6b6b]">
+              $ npx -y exa-mcp-server
+            </span>
           </div>
 
           <h1 className="font-[family-name:var(--font-serif)] text-[44px] md:text-[68px] lg:text-[80px] leading-[1.02] tracking-tight text-[#0a0a0a]">
@@ -37,6 +42,14 @@ export default function Hero() {
             >
               View on GitHub →
             </a>
+          </div>
+
+          <div className="mt-6 flex items-center justify-center gap-5 text-[12px] text-[#9a9a9a] font-[family-name:ui-monospace,SFMono-Regular,monospace]">
+            <span>8 tools</span>
+            <span className="text-[#d4d4d4]">·</span>
+            <span>450ms median</span>
+            <span className="text-[#d4d4d4]">·</span>
+            <span>stdio + sse transports</span>
           </div>
         </div>
 

@@ -9,13 +9,16 @@ export default function Navbar() {
           <span className="text-[17px] font-medium tracking-tight">
             exa<span className="text-[#6b6b6b]">·mcp</span>
           </span>
+          <span className="hidden sm:inline-flex items-center text-[10px] uppercase tracking-wider text-[#9a9a9a] font-[family-name:ui-monospace,SFMono-Regular,monospace] border border-[#ececec] px-1.5 py-0.5 rounded ml-1">
+            v0.5.1
+          </span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8 text-[14px] text-[#1a1a1a]">
-          <a href="#features" className="hover:text-[#1652f0] transition-colors">Product</a>
+          <a href="#features" className="hover:text-[#1652f0] transition-colors">Features</a>
+          <a href="#tools" className="hover:text-[#1652f0] transition-colors">Tools</a>
+          <a href="#how" className="hover:text-[#1652f0] transition-colors">How it works</a>
           <a href="#clients" className="hover:text-[#1652f0] transition-colors">Clients</a>
-          <a href="#benchmarks" className="hover:text-[#1652f0] transition-colors">Benchmarks</a>
-          <a href="#install" className="hover:text-[#1652f0] transition-colors">Install</a>
           <a
             href="https://github.com/exa-labs/exa-mcp-server"
             target="_blank"

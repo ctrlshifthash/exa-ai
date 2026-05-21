@@ -41,19 +41,38 @@ export default function SearchDemo() {
     }
   }
 
+  const toolCall = JSON.stringify(
+    {
+      tool: "exa.web_search",
+      arguments: { query, num_results: 4, latency: mode },
+    },
+    null,
+    2
+  );
+
   return (
     <div className="mx-auto max-w-[920px] rounded-2xl border border-[#ececec] bg-white shadow-[0_30px_60px_-30px_rgba(0,0,0,0.12)] overflow-hidden">
-      <form onSubmit={runSearch} className="px-5 pt-5">
-        <div className="flex items-center gap-2 text-[12px] text-[#6b6b6b] mb-3">
-          <span className="font-medium text-[#0a0a0a]">Demo</span>
-          <span>·</span>
-          <span>mocked response from /api/search</span>
+      {/* MCP tool-call header — distinguishes from generic exa.ai search bar */}
+      <div className="flex items-center justify-between border-b border-[#ececec] bg-[#fafafa] px-5 py-3">
+        <div className="flex items-center gap-2 text-[12px]">
+          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#0a0a0a] text-white font-medium">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#5dff9c]" />
+            mcp · live
+          </span>
+          <span className="font-[family-name:ui-monospace,SFMono-Regular,monospace] text-[#6b6b6b]">
+            claude → exa.web_search
+          </span>
         </div>
+        <div className="text-[11px] text-[#9a9a9a] font-[family-name:ui-monospace,SFMono-Regular,monospace]">
+          v0.5.1
+        </div>
+      </div>
 
+      <form onSubmit={runSearch} className="px-5 pt-5">
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search anything for your agent…"
+          placeholder="What is your agent looking for…"
           className="w-full text-[18px] md:text-[20px] outline-none placeholder:text-[#9a9a9a] py-1.5"
         />
 
@@ -88,78 +107,53 @@ export default function SearchDemo() {
         </div>
       </form>
 
-      <div className="mt-5 grid grid-cols-1 md:grid-cols-[200px_1fr] border-t border-[#ececec]">
-        {/* Controls column */}
-        <div className="p-5 border-b md:border-b-0 md:border-r border-[#ececec] bg-[#fafafa]">
-          <div className="text-[11px] uppercase tracking-wider text-[#6b6b6b] mb-2">
-            Latency
+      <div className="mt-5 grid grid-cols-1 md:grid-cols-[220px_1fr] border-t border-[#ececec]">
+        {/* Tool-call inspector — distinct from exa.ai */}
+        <div className="p-5 border-b md:border-b-0 md:border-r border-[#ececec] bg-[#fafafa] font-[family-name:ui-monospace,SFMono-Regular,monospace]">
+          <div className="text-[10px] uppercase tracking-wider text-[#6b6b6b] mb-2">
+            tool_call.json
           </div>
-          <div className="flex flex-wrap gap-1.5">
+          <pre className="text-[11px] leading-relaxed text-[#0a0a0a] whitespace-pre-wrap break-all">
+            {toolCall}
+          </pre>
+
+          <div className="text-[10px] uppercase tracking-wider text-[#6b6b6b] mt-5 mb-2">
+            latency
+          </div>
+          <div className="flex flex-wrap gap-1">
             {(["fast", "auto", "deep"] as Mode[]).map((m) => (
               <button
                 key={m}
                 onClick={() => setMode(m)}
-                className={`text-[12px] px-2.5 py-1 rounded-md border transition-colors ${
+                className={`text-[11px] px-2 py-1 rounded transition-colors ${
                   mode === m
-                    ? "bg-[#0a0a0a] text-white border-[#0a0a0a]"
-                    : "bg-white text-[#1a1a1a] border-[#ececec] hover:bg-[#f0f0f0]"
+                    ? "bg-[#0a0a0a] text-white"
+                    : "bg-white text-[#1a1a1a] border border-[#ececec] hover:bg-[#f0f0f0]"
                 }`}
               >
-                {m === "fast" && "Fast"}
-                {m === "auto" && "Auto"}
-                {m === "deep" && "Deep"}
-                <span className="ml-1 text-[10px] opacity-70">
-                  {m === "fast" ? "450ms" : m === "auto" ? "1s" : "~10s"}
-                </span>
+                {m}
               </button>
             ))}
           </div>
-
-          <div className="text-[11px] uppercase tracking-wider text-[#6b6b6b] mt-5 mb-2">
-            Category
-          </div>
-          <div className="flex flex-wrap gap-1.5">
-            {["Full Web", "News", "Companies", "Research", "People", "Financials"].map(
-              (c, i) => (
-                <span
-                  key={c}
-                  className={`text-[12px] px-2.5 py-1 rounded-md border ${
-                    i === 0
-                      ? "bg-white border-[#0a0a0a] text-[#0a0a0a]"
-                      : "bg-white border-[#ececec] text-[#6b6b6b]"
-                  }`}
-                >
-                  {c}
-                </span>
-              )
-            )}
-          </div>
         </div>
 
-        {/* Results column */}
+        {/* Tool response — results */}
         <div className="p-5 min-h-[300px]">
-          <div className="flex items-center justify-between text-[11px] uppercase tracking-wider text-[#6b6b6b] mb-3">
-            <div className="flex items-center gap-3">
-              <span className="text-[#0a0a0a] font-medium normal-case tracking-normal text-[13px]">
-                Results
-              </span>
-              <span className="text-[#9a9a9a] normal-case tracking-normal text-[12px]">
-                Answer
-              </span>
-              <span className="text-[#9a9a9a] normal-case tracking-normal text-[12px]">
-                Structured
-              </span>
+          <div className="flex items-center justify-between text-[11px] mb-3">
+            <div className="flex items-center gap-2 font-[family-name:ui-monospace,SFMono-Regular,monospace] text-[#6b6b6b]">
+              <span className="text-[#0a0a0a] font-medium">tool_response</span>
+              {latency !== null && (
+                <span className="text-[#1652f0]">{latency}ms · -80% tokens</span>
+              )}
             </div>
-            {latency !== null && (
-              <div className="text-[11px] text-[#1652f0]">
-                ↓ 80% tokens · {latency}ms
-              </div>
-            )}
+            <div className="text-[11px] text-[#9a9a9a]">
+              {results ? `${results.length} results` : "—"}
+            </div>
           </div>
 
           {!results && !loading && (
             <div className="text-[14px] text-[#9a9a9a] py-12 text-center">
-              Press the blue arrow to run a search.
+              Press the blue arrow to simulate an MCP tool call.
             </div>
           )}
 
