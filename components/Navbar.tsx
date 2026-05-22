@@ -54,6 +54,7 @@ export default function Navbar() {
         </a>
 
         <nav className="hidden md:flex items-center gap-8 text-[14px] text-[#1a1a1a]">
+          <a href="#top" className="hover:text-[#1652f0] transition-colors">Home</a>
           <a href="#features" className="hover:text-[#1652f0] transition-colors">Features</a>
           <a href="#tools" className="hover:text-[#1652f0] transition-colors">Tools</a>
           <a href="#how" className="hover:text-[#1652f0] transition-colors">How it works</a>

@@ -12,12 +12,21 @@
   --color-accent-soft: #e7edff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   background: var(--color-bg);
   color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+/* Offset anchor scrolls so the sticky navbar doesn't cover the heading */
+section[id] {
+  scroll-margin-top: 80px;
 }
 
 ::selection {
