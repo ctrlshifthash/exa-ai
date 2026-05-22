@@ -35,7 +35,7 @@ export default function Hero() {
               Install Exalink
             </a>
             <a
-              href="https://github.com/ctrlshifthash/exa-ai"
+              href="https://github.com/WilliamBryk/Autoreason"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center text-[15px] font-medium px-5 py-3 rounded-md border border-[#d4d4d4] hover:bg-[#fafafa] transition-colors"

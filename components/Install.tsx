@@ -86,7 +86,7 @@ export default function Install() {
           </p>
           <div className="flex items-center gap-3">
             <a
-              href="https://github.com/ctrlshifthash/exa-ai"
+              href="https://github.com/WilliamBryk/Autoreason"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center bg-white text-[#1652f0] text-[15px] font-medium px-5 py-3 rounded-md hover:bg-white/95"

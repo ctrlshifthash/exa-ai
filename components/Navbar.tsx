@@ -20,7 +20,7 @@ export default function Navbar() {
           <a href="#how" className="hover:text-[#1652f0] transition-colors">How it works</a>
           <a href="#clients" className="hover:text-[#1652f0] transition-colors">Clients</a>
           <a
-            href="https://github.com/ctrlshifthash/exa-ai"
+            href="https://github.com/WilliamBryk/Autoreason"
             target="_blank"
             rel="noreferrer"
             className="hover:text-[#1652f0] transition-colors"

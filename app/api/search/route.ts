@@ -46,7 +46,7 @@ const MOCK_RESULTS: Record<string, SearchResult[]> = {
   default: [
     {
       title: "Exalink — MCP server for Exa web search",
-      url: "https://github.com/ctrlshifthash/exa-ai",
+      url: "https://github.com/WilliamBryk/Autoreason",
       source: "github.com",
       snippet:
         "Exalink links Exa's neural web search to any MCP-compatible AI agent — Claude, Cursor, Windsurf, Cline, and the rest. One install, eight tools.",

@@ -33,7 +33,7 @@ export default function Footer() {
           <ul className="space-y-2 text-[#6b6b6b]">
             <li>
               <a
-                href="https://github.com/ctrlshifthash/exa-ai"
+                href="https://github.com/WilliamBryk/Autoreason"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-[#0a0a0a]"
