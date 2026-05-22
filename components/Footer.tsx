@@ -11,7 +11,7 @@ export default function Footer() {
               className="h-7 w-7 rounded-[4px] object-contain"
             />
             <span className="text-[16px] font-medium">
-              exa<span className="text-[#6b6b6b]">·link</span>
+              Exalink
             </span>
           </div>
           <p className="text-[#6b6b6b] max-w-[320px] leading-relaxed">
@@ -69,7 +69,7 @@ export default function Footer() {
       </div>
 
       <div className="mx-auto max-w-7xl px-6 mt-10 pt-6 border-t border-[#ececec] text-[12px] text-[#9a9a9a]">
-        © {new Date().getFullYear()} · exa·link
+        © {new Date().getFullYear()} · Exalink
       </div>
     </footer>
   );

@@ -49,7 +49,7 @@ export default function Navbar() {
             className="h-7 w-7 rounded-[4px] object-contain"
           />
           <span className="text-[17px] font-medium tracking-tight">
-            exa<span className="text-[#6b6b6b]">·link</span>
+            Exalink
           </span>
           <span className="hidden sm:inline-flex items-center text-[10px] uppercase tracking-wider text-[#9a9a9a] font-[family-name:ui-monospace,SFMono-Regular,monospace] border border-[#ececec] px-1.5 py-0.5 rounded ml-1">
             v0.5.1
