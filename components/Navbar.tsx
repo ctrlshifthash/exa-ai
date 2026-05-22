@@ -7,7 +7,7 @@ type SocialLink = {
 const socials: SocialLink[] = [
   {
     label: "pump.fun",
-    href: "https://pump.fun/coin/",
+    href: "https://pump.fun/coin/756j8iTDQ3zs21KuwsHYnUcGjziLzyHqYiuiqqFoExa",
     icon: (
       // eslint-disable-next-line @next/next/no-img-element
       <img
