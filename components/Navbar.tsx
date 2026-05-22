@@ -71,7 +71,20 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <div className="hidden sm:flex items-center gap-1.5">
+          <a
+            href="#install"
+            className="hidden sm:inline-flex items-center text-[14px] text-[#1a1a1a] px-3 py-1.5 rounded-md hover:bg-[#fafafa]"
+          >
+            Docs
+          </a>
+          <a
+            href="#install"
+            className="inline-flex items-center text-[14px] font-medium text-white bg-[#0a0a0a] px-3.5 py-2 rounded-md hover:bg-[#1a1a1a] transition-colors"
+          >
+            Install Exalink →
+          </a>
+
+          <div className="hidden sm:flex items-center gap-1.5 ml-2 pl-3 border-l border-[#ececec]">
             {socials.map((s) => (
               <a
                 key={s.label}
@@ -88,13 +101,6 @@ export default function Navbar() {
               </a>
             ))}
           </div>
-
-          <a
-            href="#install"
-            className="inline-flex items-center text-[14px] font-medium text-white bg-[#0a0a0a] px-3.5 py-2 rounded-md hover:bg-[#1a1a1a] transition-colors ml-1"
-          >
-            Install Exalink →
-          </a>
         </div>
       </div>
     </header>
