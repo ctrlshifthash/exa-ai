@@ -40,8 +40,8 @@ const socials: SocialLink[] = [
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-[#ececec]">
-      <div className="mx-auto max-w-7xl grid grid-cols-[1fr_auto_1fr] items-center px-6 py-4 gap-6">
-        <a href="/" className="flex items-center gap-2 group justify-self-start">
+      <div className="relative mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
+        <a href="/" className="flex items-center gap-2 group">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/logo.png"
@@ -53,7 +53,7 @@ export default function Navbar() {
           </span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-8 text-[14px] text-[#1a1a1a] justify-self-center">
+        <nav className="hidden lg:flex items-center gap-8 text-[14px] text-[#1a1a1a] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <a href="#top" className="hover:text-[#1652f0] transition-colors">Home</a>
           <a href="#features" className="hover:text-[#1652f0] transition-colors">Features</a>
           <a href="#tools" className="hover:text-[#1652f0] transition-colors">Tools</a>
@@ -61,7 +61,7 @@ export default function Navbar() {
           <a href="#clients" className="hover:text-[#1652f0] transition-colors">Clients</a>
         </nav>
 
-        <div className="flex items-center gap-2 justify-self-end">
+        <div className="flex items-center gap-2">
           <a
             href="#install"
             className="hidden sm:inline-flex items-center text-[14px] text-[#1a1a1a] px-3 py-1.5 rounded-md hover:bg-[#fafafa]"
