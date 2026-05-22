@@ -4,9 +4,12 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-[14px]">
         <div className="col-span-2">
           <div className="flex items-center gap-2 mb-4">
-            <span className="inline-flex h-6 w-6 items-center justify-center bg-[#1652f0] text-white text-[12px] font-semibold rounded-[3px]">
-              ✕
-            </span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo.png"
+              alt="Exalink"
+              className="h-7 w-7 rounded-[4px] object-contain"
+            />
             <span className="text-[16px] font-medium">
               exa<span className="text-[#6b6b6b]">·link</span>
             </span>

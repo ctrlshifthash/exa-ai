@@ -9,22 +9,12 @@ const socials: SocialLink[] = [
     label: "pump.fun",
     href: "https://pump.fun",
     icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="h-[14px] w-[14px]"
-      >
-        <path d="m18 2 4 4" />
-        <path d="m17 7 3-3" />
-        <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-        <path d="m9 11 4 4" />
-        <path d="m5 19-3 3" />
-        <path d="m14 4 6 6" />
-      </svg>
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src="/pumpfun.png"
+        alt=""
+        className="h-[16px] w-[16px] object-contain"
+      />
     ),
   },
   {
@@ -52,9 +42,12 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-[#ececec]">
       <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
         <a href="/" className="flex items-center gap-2 group">
-          <span className="inline-flex h-6 w-6 items-center justify-center bg-[#1652f0] text-white text-[12px] font-semibold tracking-tight rounded-[3px]">
-            ✕
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.png"
+            alt="Exalink"
+            className="h-7 w-7 rounded-[4px] object-contain"
+          />
           <span className="text-[17px] font-medium tracking-tight">
             exa<span className="text-[#6b6b6b]">·link</span>
           </span>
