@@ -12,9 +12,9 @@ export default function Architecture() {
             </h2>
             <p className="text-[15px] leading-relaxed text-[#5a5a5a] mb-6">
               The Model Context Protocol is the open standard for connecting AI
-              tools to data sources. Exa runs an MCP server in front of its
-              search API — so any client that speaks MCP can call Exa with
-              zero glue code.
+              clients to external tools. Exalink is a local MCP server that
+              sits in front of Exa&rsquo;s search API — so any agent that
+              speaks MCP can search the web with zero glue code.
             </p>
             <a
               href="https://modelcontextprotocol.io"
@@ -38,8 +38,8 @@ export default function Architecture() {
               />
               <Step
                 num="02"
-                label="mcp"
-                title="exa-mcp-server"
+                label="exalink"
+                title="exalink-mcp"
                 body="Local process. Translates JSON-RPC tool calls into Exa API requests, streams results back."
                 detail="transport: stdio · v0.5.1"
                 accent

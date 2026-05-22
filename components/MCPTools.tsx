@@ -91,7 +91,7 @@ export default function MCPTools() {
         </div>
 
         <div className="mt-10 text-center text-[13px] text-[#6b6b6b] font-[family-name:ui-monospace,SFMono-Regular,monospace]">
-          <span className="text-[#0a0a0a]">$</span> npx exa-mcp-server --list-tools
+          <span className="text-[#0a0a0a]">$</span> exalink tools/list
         </div>
       </div>
     </section>

@@ -7,9 +7,9 @@ type Tab = "claude" | "cursor" | "npm";
 const snippets: Record<Tab, string> = {
   claude: `{
   "mcpServers": {
-    "exa": {
+    "exalink": {
       "command": "npx",
-      "args": ["-y", "exa-mcp-server"],
+      "args": ["-y", "exalink-mcp"],
       "env": { "EXA_API_KEY": "your_exa_api_key" }
     }
   }
@@ -17,18 +17,18 @@ const snippets: Record<Tab, string> = {
   cursor: `// .cursor/mcp.json
 {
   "mcpServers": {
-    "exa": {
+    "exalink": {
       "command": "npx",
-      "args": ["-y", "exa-mcp-server"],
+      "args": ["-y", "exalink-mcp"],
       "env": { "EXA_API_KEY": "your_exa_api_key" }
     }
   }
 }`,
   npm: `# install globally
-npm install -g exa-mcp-server
+npm install -g exalink-mcp
 
 # or run on-demand
-npx -y exa-mcp-server
+npx -y exalink-mcp
 
 # requires an Exa API key
 export EXA_API_KEY="your_exa_api_key"`,
@@ -86,7 +86,7 @@ export default function Install() {
           </p>
           <div className="flex items-center gap-3">
             <a
-              href="https://github.com/exa-labs/exa-mcp-server"
+              href="https://github.com/ctrlshifthash/exa-ai"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center bg-white text-[#1652f0] text-[15px] font-medium px-5 py-3 rounded-md hover:bg-white/95"

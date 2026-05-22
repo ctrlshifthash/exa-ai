@@ -43,7 +43,7 @@ export default function SearchDemo() {
 
   const toolCall = JSON.stringify(
     {
-      tool: "exa.web_search",
+      tool: "exalink.web_search",
       arguments: { query, num_results: 4, latency: mode },
     },
     null,
@@ -60,7 +60,7 @@ export default function SearchDemo() {
             mcp · live
           </span>
           <span className="font-[family-name:ui-monospace,SFMono-Regular,monospace] text-[#6b6b6b]">
-            claude → exa.web_search
+            claude → exalink.web_search
           </span>
         </div>
         <div className="text-[11px] text-[#9a9a9a] font-[family-name:ui-monospace,SFMono-Regular,monospace]">
@@ -153,7 +153,7 @@ export default function SearchDemo() {
 
           {!results && !loading && (
             <div className="text-[14px] text-[#9a9a9a] py-12 text-center">
-              Press the blue arrow to simulate an MCP tool call.
+              Press the blue arrow to call exalink.web_search.
             </div>
           )}
 

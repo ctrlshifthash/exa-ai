@@ -45,12 +45,12 @@ const MOCK_RESULTS: Record<string, SearchResult[]> = {
   ],
   default: [
     {
-      title: "Exa MCP Server — Official Repository",
-      url: "https://github.com/exa-labs/exa-mcp-server",
+      title: "Exalink — MCP server for Exa web search",
+      url: "https://github.com/ctrlshifthash/exa-ai",
       source: "github.com",
       snippet:
-        "The official MCP server for Exa's neural web search. Compatible with Claude, Cursor, Windsurf, Cline, and any MCP-compatible client.",
-      publishedDate: "2026-05-20",
+        "Exalink links Exa's neural web search to any MCP-compatible AI agent — Claude, Cursor, Windsurf, Cline, and the rest. One install, eight tools.",
+      publishedDate: "2026-05-22",
     },
     {
       title: "Model Context Protocol — Specification",
@@ -61,15 +61,15 @@ const MOCK_RESULTS: Record<string, SearchResult[]> = {
       publishedDate: "2026-04-30",
     },
     {
-      title: "Connect Claude Desktop to the Web with Exa MCP",
+      title: "Connect Claude Desktop to the web with Exalink",
       url: "https://exa.ai/blog/claude-mcp",
       source: "exa.ai",
       snippet:
-        "A 30-second walkthrough: install the Exa MCP server, drop your API key into Claude's config, and your agent can now search the open web.",
+        "A 30-second walkthrough: install Exalink, drop your Exa API key into Claude's config, and your agent can now search the open web.",
       publishedDate: "2026-04-18",
     },
     {
-      title: "Exa vs. Tavily vs. Brave: Search APIs for Agents Compared",
+      title: "Exa vs. Tavily vs. Brave: search APIs for agents compared",
       url: "https://benchmarks.dev/search-apis-2026",
       source: "benchmarks.dev",
       snippet:

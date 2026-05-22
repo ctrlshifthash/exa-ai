@@ -16,9 +16,9 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Exa MCP — The web search MCP for AI agents",
+  title: "Exalink — Exa's web search, linked to your agent",
   description:
-    "One MCP server. Plug Exa's neural web search into Claude, Cursor, Windsurf, and any MCP-compatible client.",
+    "Exalink is the MCP server that connects Claude, Cursor, Windsurf, and every MCP-compatible client to Exa's neural web search. One install, eight tools.",
 };
 
 export default function RootLayout({

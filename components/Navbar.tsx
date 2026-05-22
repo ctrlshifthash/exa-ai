@@ -7,7 +7,7 @@ export default function Navbar() {
             ✕
           </span>
           <span className="text-[17px] font-medium tracking-tight">
-            exa<span className="text-[#6b6b6b]">·mcp</span>
+            exa<span className="text-[#6b6b6b]">·link</span>
           </span>
           <span className="hidden sm:inline-flex items-center text-[10px] uppercase tracking-wider text-[#9a9a9a] font-[family-name:ui-monospace,SFMono-Regular,monospace] border border-[#ececec] px-1.5 py-0.5 rounded ml-1">
             v0.5.1
@@ -20,7 +20,7 @@ export default function Navbar() {
           <a href="#how" className="hover:text-[#1652f0] transition-colors">How it works</a>
           <a href="#clients" className="hover:text-[#1652f0] transition-colors">Clients</a>
           <a
-            href="https://github.com/exa-labs/exa-mcp-server"
+            href="https://github.com/ctrlshifthash/exa-ai"
             target="_blank"
             rel="noreferrer"
             className="hover:text-[#1652f0] transition-colors"
@@ -40,7 +40,7 @@ export default function Navbar() {
             href="#install"
             className="inline-flex items-center text-[14px] font-medium text-white bg-[#0a0a0a] px-3.5 py-2 rounded-md hover:bg-[#1a1a1a] transition-colors"
           >
-            Install MCP →
+            Install Exalink →
           </a>
         </div>
       </div>

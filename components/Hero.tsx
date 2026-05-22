@@ -11,7 +11,7 @@ export default function Hero() {
               mcp · stable
             </span>
             <span className="hidden sm:inline-flex text-[11px] font-[family-name:ui-monospace,SFMono-Regular,monospace] text-[#6b6b6b]">
-              $ npx -y exa-mcp-server
+              $ npx -y exalink-mcp
             </span>
           </div>
 
@@ -22,9 +22,9 @@ export default function Hero() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-[640px] text-[16px] md:text-[18px] leading-relaxed text-[#5a5a5a]">
-            One MCP server. Plug Exa&rsquo;s neural web search into Claude,
-            Cursor, Windsurf, and every MCP-compatible client. No API juggling,
-            no orchestration code — just install and search.
+            Exalink is the MCP server that links Exa&rsquo;s neural web search
+            to Claude, Cursor, Windsurf, and every MCP-compatible client. No
+            API juggling, no orchestration code — just install and search.
           </p>
 
           <div className="mt-9 flex items-center justify-center gap-3">
@@ -32,10 +32,10 @@ export default function Hero() {
               href="#install"
               className="inline-flex items-center justify-center bg-[#0a0a0a] text-white text-[15px] font-medium px-5 py-3 rounded-md hover:bg-[#1a1a1a] transition-colors"
             >
-              Install MCP server
+              Install Exalink
             </a>
             <a
-              href="https://github.com/exa-labs/exa-mcp-server"
+              href="https://github.com/ctrlshifthash/exa-ai"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center text-[15px] font-medium px-5 py-3 rounded-md border border-[#d4d4d4] hover:bg-[#fafafa] transition-colors"

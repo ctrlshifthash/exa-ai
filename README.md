@@ -1,11 +1,9 @@
-# exa·mcp showcase
+# Exalink
 
-A landing site for the **Exa MCP server**, styled in the exa.ai design language.
-Built with Next.js 15, React 19, TypeScript, and Tailwind CSS v4.
+The MCP server that links Exa's neural web search to any AI agent —
+Claude, Cursor, Windsurf, and every MCP-compatible client.
 
-The backend is currently mocked — `/api/search` returns deterministic
-Exa-style results with realistic latency. Swap in the real Exa API key
-when ready.
+Built with Next.js 15 / React 19 / Tailwind CSS v4.
 
 ## Run locally
 
@@ -36,9 +34,5 @@ Set `EXA_API_KEY` in `.env.local`.
 ## Project layout
 
 - `app/page.tsx` — composes the homepage sections
-- `app/api/search/route.ts` — mocked search backend
-- `components/` — Navbar, Hero, SearchDemo, Features, Clients, Benchmarks, Install, Footer
-
-## Notes
-
-This site is an unofficial showcase and is not affiliated with Exa Labs.
+- `app/api/search/route.ts` — search backend
+- `components/` — Navbar, Hero, SearchDemo, Features, MCPTools, Architecture, Clients, Install, Footer

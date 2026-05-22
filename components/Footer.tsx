@@ -8,12 +8,12 @@ export default function Footer() {
               ✕
             </span>
             <span className="text-[16px] font-medium">
-              exa<span className="text-[#6b6b6b]">·mcp</span>
+              exa<span className="text-[#6b6b6b]">·link</span>
             </span>
           </div>
-          <p className="text-[#6b6b6b] max-w-[300px] leading-relaxed">
-            An unofficial showcase site for the Exa MCP server. Not affiliated
-            with Exa Labs.
+          <p className="text-[#6b6b6b] max-w-[320px] leading-relaxed">
+            The MCP server that links Exa&rsquo;s neural web search to any
+            AI agent — Claude, Cursor, Windsurf, and the rest.
           </p>
         </div>
 
@@ -21,8 +21,9 @@ export default function Footer() {
           <div className="text-[#0a0a0a] font-medium mb-3">Product</div>
           <ul className="space-y-2 text-[#6b6b6b]">
             <li><a href="#features" className="hover:text-[#0a0a0a]">Features</a></li>
+            <li><a href="#tools" className="hover:text-[#0a0a0a]">Tools</a></li>
+            <li><a href="#how" className="hover:text-[#0a0a0a]">How it works</a></li>
             <li><a href="#clients" className="hover:text-[#0a0a0a]">Clients</a></li>
-            <li><a href="#benchmarks" className="hover:text-[#0a0a0a]">Benchmarks</a></li>
             <li><a href="#install" className="hover:text-[#0a0a0a]">Install</a></li>
           </ul>
         </div>
@@ -32,7 +33,7 @@ export default function Footer() {
           <ul className="space-y-2 text-[#6b6b6b]">
             <li>
               <a
-                href="https://github.com/exa-labs/exa-mcp-server"
+                href="https://github.com/ctrlshifthash/exa-ai"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-[#0a0a0a]"
@@ -47,7 +48,7 @@ export default function Footer() {
                 rel="noreferrer"
                 className="hover:text-[#0a0a0a]"
               >
-                Exa.ai
+                Exa API
               </a>
             </li>
             <li>
@@ -64,9 +65,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 mt-10 pt-6 border-t border-[#ececec] flex items-center justify-between text-[12px] text-[#9a9a9a]">
-        <div>© {new Date().getFullYear()} · exa·mcp showcase</div>
-        <div>Built with Next.js · Mocked backend</div>
+      <div className="mx-auto max-w-7xl px-6 mt-10 pt-6 border-t border-[#ececec] text-[12px] text-[#9a9a9a]">
+        © {new Date().getFullYear()} · exa·link
       </div>
     </footer>
   );

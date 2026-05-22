@@ -22,7 +22,7 @@ const features: Feature[] = [
     title: "Highlights, not haystacks.",
     body: "Exa's Contents API returns only the relevant excerpts from each page. Cut up to 80% of the tokens your agent would otherwise burn parsing full HTML.",
     badge: "CLAUDE",
-    badgeBody: "Plug Exa MCP into Claude Desktop — neural search becomes a built-in tool.",
+    badgeBody: "Drop Exalink into Claude Desktop's mcpServers config — neural search becomes a built-in tool.",
     gradient:
       "linear-gradient(135deg,#f3ecff 0%,#cab4ff 40%,#8a63ff 100%)",
   },
@@ -31,7 +31,7 @@ const features: Feature[] = [
     title: "450ms search. 10s deep research.",
     body: "Pick the latency you need on every call. Fast mode for snappy autocomplete, Deep mode for multi-step research that mirrors how a human would investigate.",
     badge: "WINDSURF",
-    badgeBody: "Adds Exa as a first-class context source in the Cascade agent.",
+    badgeBody: "Adds Exalink as a first-class context source in the Cascade agent.",
     gradient:
       "linear-gradient(135deg,#e6fff1 0%,#9bf0c0 45%,#1cbf6f 100%)",
   },
